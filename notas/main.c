@@ -26,7 +26,7 @@ int main() {
                 printf("Digite a nota do aluno %d (entre 0.0 e 10.0): ", i + 1);
                 scanf("%f", &notas[i]);
                 if (notas[i] < 0.0 || notas[i] > 10.0) {
-                    printf("Nota inválida! Digite uma nota entre 0.0 e 10.0.\n");
+                    printf("Nota invalida! Digite uma nota entre 0.0 e 10.0.\n");
                 }
             } while (notas[i] < 0.0 || notas[i] > 10.0);
         }
@@ -49,18 +49,18 @@ int main() {
         mediaGeral /= n;
 
 
-        printf("\nDigite a posição do aluno (1 a %d) para saber sua nota: ", n);
+        printf("\nDigite a posicao do aluno (1 a %d) para saber sua nota: ", n);
         scanf("%d", &k);
 
         if (k >= 1 && k <= n) {
-            printf("A nota do aluno na posição %d é: %.2f\n", k, notas[k-1]);
+            printf("A nota do aluno na posicao %d é: %.2f\n", k, notas[k-1]);
         } else {
-            printf("Posição inválida!\n");
+            printf("Posicao invalida!\n");
         }
 
         
         printf("\nResultados:\n");
-        printf("Média geral da turma: %.2f\n", mediaGeral);
+        printf("Media geral da turma: %.2f\n", mediaGeral);
         printf("Maior nota: %.2f\n", maiorNota);
         printf("Menor nota: %.2f\n", menorNota);
         printf("Quantidade de alunos aprovados: %d\n", aprovados);
