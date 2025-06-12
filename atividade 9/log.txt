@@ -1,0 +1,18 @@
+número mínimo: 3
+número máximo: 50
+número esperado: 5
+número sorteado: 7
+resultado: não sorteado
+
+numero minimo: 10
+numero maximo: 50
+numero esperado: 40
+numero sorteado: 17
+resultado: não sorteado
+
+numero minimo: 50
+numero maximo: 100
+numero esperado: 80
+numero sorteado: 97
+resultado: não sorteado
+
