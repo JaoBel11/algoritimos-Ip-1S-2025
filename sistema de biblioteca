@@ -1,0 +1,120 @@
+// Classe abstrata Pessoa
+public abstract class Pessoa {
+    protected String nome;
+    protected String email;
+
+    public Pessoa(String nome, String email) {
+        this.nome = nome;
+        this.email = email;
+    }
+
+    public abstract void exibirInfo();
+}
+
+// Classe Usuario
+public class Usuario extends Pessoa {
+    private int matricula;
+
+    public Usuario(String nome, String email, int matricula) {
+        super(nome, email);
+        this.matricula = matricula;
+    }
+
+    @Override
+    public void exibirInfo() {
+        System.out.println("Usuário:");
+        System.out.println("Nome: " + nome);
+        System.out.println("Email: " + email);
+        System.out.println("Matrícula: " + matricula);
+    }
+}
+
+// Classe Funcionario
+public class Funcionario extends Pessoa {
+    private String cargo;
+
+    public Funcionario(String nome, String email, String cargo) {
+        super(nome, email);
+        this.cargo = cargo;
+    }
+
+    @Override
+    public void exibirInfo() {
+        System.out.println("Funcionário:");
+        System.out.println("Nome: " + nome);
+        System.out.println("Email: " + email);
+        System.out.println("Cargo: " + cargo);
+    }
+}
+
+// Classe abstrata Material
+public abstract class Material {
+    protected String titulo;
+    protected int anoPublicacao;
+
+    public Material(String titulo, int anoPublicacao) {
+        this.titulo = titulo;
+        this.anoPublicacao = anoPublicacao;
+    }
+
+    public abstract void descricao();
+}
+
+// Classe Livro
+public class Livro extends Material {
+    private String edicao;
+
+    public Livro(String titulo, int anoPublicacao, String edicao) {
+        super(titulo, anoPublicacao);
+        this.edicao = edicao;
+    }
+
+    @Override
+    public void descricao() {
+        System.out.println("Livro:");
+        System.out.println("Título: " + titulo);
+        System.out.println("Ano de Publicação: " + anoPublicacao);
+        System.out.println("Edição: " + edicao);
+    }
+}
+
+// Classe Revista
+public class Revista extends Material {
+    private String autor;
+
+    public Revista(String titulo, int anoPublicacao, String autor) {
+        super(titulo, anoPublicacao);
+        this.autor = autor;
+    }
+
+    @Override
+    public void descricao() {
+        System.out.println("Revista:");
+        System.out.println("Título: " + titulo);
+        System.out.println("Ano de Publicação: " + anoPublicacao);
+        System.out.println("Autor: " + autor);
+    }
+}
+
+// Classe Emprestimo
+public class Emprestimo {
+    private Pessoa pessoa;
+    private Material material;
+    private String dataEmprestimo;
+    private String dataDevolucao;
+
+    public Emprestimo(Pessoa pessoa, Material material, String dataEmprestimo, String dataDevolucao) {
+        this.pessoa = pessoa;
+        this.material = material;
+        this.dataEmprestimo = dataEmprestimo;
+        this.dataDevolucao = dataDevolucao;
+    }
+
+    public void exibirDetalhes() {
+        System.out.println("=== Empréstimo ===");
+        System.out.println("Data do Empréstimo: " + dataEmprestimo);
+        System.out.println("Data de Devolução: " + dataDevolucao);
+        pessoa.exibirInfo();
+        material.descricao();
+    }
+}
