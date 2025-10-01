@@ -1,4 +1,4 @@
-// Classe abstrata Pessoa
+
 public abstract class Pessoa {
     protected String nome;
     protected String email;
@@ -11,7 +11,7 @@ public abstract class Pessoa {
     public abstract void exibirInfo();
 }
 
-// Classe Usuario
+
 public class Usuario extends Pessoa {
     private int matricula;
 
@@ -29,7 +29,7 @@ public class Usuario extends Pessoa {
     }
 }
 
-// Classe Funcionario
+
 public class Funcionario extends Pessoa {
     private String cargo;
 
@@ -47,7 +47,7 @@ public class Funcionario extends Pessoa {
     }
 }
 
-// Classe abstrata Material
+
 public abstract class Material {
     protected String titulo;
     protected int anoPublicacao;
@@ -60,7 +60,7 @@ public abstract class Material {
     public abstract void descricao();
 }
 
-// Classe Livro
+
 public class Livro extends Material {
     private String edicao;
 
@@ -78,7 +78,7 @@ public class Livro extends Material {
     }
 }
 
-// Classe Revista
+
 public class Revista extends Material {
     private String autor;
 
@@ -96,7 +96,7 @@ public class Revista extends Material {
     }
 }
 
-// Classe Emprestimo
+
 public class Emprestimo {
     private Pessoa pessoa;
     private Material material;
